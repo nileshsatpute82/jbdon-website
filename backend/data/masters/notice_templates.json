@@ -1,0 +1,56 @@
+[
+  {
+    "id": "NT001",
+    "name": "Technical Breach - First Notice",
+    "type": "breach_notice",
+    "severity": "technical",
+    "subject": "Notice of Covenant Breach - {{series_name}} (ISIN: {{isin}})",
+    "body": "Dear Sir/Madam,\n\nThis is with reference to the Trust Deed dated {{trust_deed_date}} executed between {{issuer_name}} (\"Company\") and Axis Trustee Services Limited (\"Debenture Trustee\") in connection with the above-mentioned Non-Convertible Debentures.\n\nBased on our review of the quarterly financial results for {{testing_period}}, we have observed a breach of the following covenant:\n\nCovenant: {{covenant_name}}\nTrust Deed Reference: Section {{trust_deed_section}}\nRequired Threshold: {{comparison_display}} {{threshold}} {{unit}}\nActual Value: {{actual_value}} {{unit}}\nDeviation: {{deviation_pct}}%\n\nAs per the terms of the Trust Deed, you are hereby notified that the above covenant has been breached. The Company is required to cure this breach within {{cure_period_days}} days from the date of this notice, i.e., by {{cure_deadline}}.\n\nPlease submit a remediation plan within 7 (seven) days from the date of this notice, outlining the steps the Company proposes to take to cure the breach.\n\nFailure to cure the breach within the stipulated time may result in the Debenture Trustee taking appropriate action as per the terms of the Trust Deed.\n\nWe request your immediate attention to this matter.\n\nYours faithfully,\nFor Axis Trustee Services Limited\n\nAuthorized Signatory",
+    "is_active": true
+  },
+  {
+    "id": "NT002",
+    "name": "Material Breach - First Notice",
+    "type": "breach_notice",
+    "severity": "material",
+    "subject": "URGENT: Notice of Material Covenant Breach - {{series_name}} (ISIN: {{isin}})",
+    "body": "Dear Sir/Madam,\n\nThis is with reference to the Trust Deed dated {{trust_deed_date}} executed between {{issuer_name}} (\"Company\") and Axis Trustee Services Limited (\"Debenture Trustee\").\n\nWe write to bring to your URGENT attention a MATERIAL BREACH of covenant under the Trust Deed:\n\nCovenant: {{covenant_name}}\nTrust Deed Reference: Section {{trust_deed_section}}\nRequired Threshold: {{comparison_display}} {{threshold}} {{unit}}\nActual Value: {{actual_value}} {{unit}}\nDeviation: {{deviation_pct}}%\nSeverity: MATERIAL BREACH\n\nGiven the material nature of this breach, we require:\n\n1. An immediate response acknowledging receipt of this notice within 2 business days\n2. A detailed remediation plan within 5 business days\n3. A meeting with the management team to discuss the breach and remediation measures\n\nThe cure period as per the Trust Deed is {{cure_period_days}} days, expiring on {{cure_deadline}}.\n\nPlease note that continued breach may trigger the following consequences:\n- Reporting to SEBI and stock exchanges\n- Convening a meeting of debenture holders\n- Potential enforcement of security\n- Declaration of Event of Default\n\nWe await your immediate response.\n\nYours faithfully,\nFor Axis Trustee Services Limited\n\nAuthorized Signatory",
+    "is_active": true
+  },
+  {
+    "id": "NT003",
+    "name": "Critical Breach - First Notice",
+    "type": "breach_notice",
+    "severity": "critical",
+    "subject": "CRITICAL: Notice of Severe Covenant Breach - Immediate Action Required - {{series_name}}",
+    "body": "Dear Sir/Madam,\n\nREF: Trust Deed dated {{trust_deed_date}} - {{series_name}} (ISIN: {{isin}})\n\nWe write to notify you of a CRITICAL COVENANT BREACH that requires your IMMEDIATE attention and action:\n\nCovenant: {{covenant_name}}\nTrust Deed Reference: Section {{trust_deed_section}}\nRequired Threshold: {{comparison_display}} {{threshold}} {{unit}}\nActual Value: {{actual_value}} {{unit}}\nDeviation: {{deviation_pct}}%\nSeverity: CRITICAL\n\nGiven the severity of this breach, we hereby:\n\n1. DEMAND an immediate response within 24 hours of receipt of this notice\n2. REQUIRE the Managing Director/CEO to personally acknowledge this breach\n3. INSIST on a remediation plan within 3 business days\n4. RESERVE the right to take immediate enforcement action\n\nThe cure period is {{cure_period_days}} days, expiring on {{cure_deadline}}. However, given the critical nature of the breach, we may initiate enforcement proceedings earlier if satisfactory progress is not demonstrated.\n\nThis notice is being copied to:\n- Lead Arrangers\n- Credit Rating Agencies\n- Statutory Auditors\n\nImmediate compliance is required.\n\nYours faithfully,\nFor Axis Trustee Services Limited\n\nAuthorized Signatory",
+    "is_active": true
+  },
+  {
+    "id": "NT004",
+    "name": "Cure Period Reminder",
+    "type": "reminder",
+    "severity": "all",
+    "subject": "Reminder: Cure Period Expiring - {{series_name}} (ISIN: {{isin}})",
+    "body": "Dear Sir/Madam,\n\nThis is a reminder regarding the covenant breach notified vide our letter dated {{notice_date}}.\n\nBreach Details:\nCovenant: {{covenant_name}}\nBreach Date: {{detection_date}}\nCure Period: {{cure_period_days}} days\nCure Deadline: {{cure_deadline}}\nDays Remaining: {{days_remaining}}\n\nWe note that the cure period is expiring soon. Please provide an update on the remediation measures being taken and confirm whether the breach will be cured by the deadline.\n\nIf you anticipate any difficulty in curing the breach within the stipulated time, please inform us immediately so that we may consider appropriate steps including seeking consent from debenture holders for extension of cure period.\n\nYours faithfully,\nFor Axis Trustee Services Limited\n\nAuthorized Signatory",
+    "is_active": true
+  },
+  {
+    "id": "NT005",
+    "name": "Breach Cured Confirmation",
+    "type": "confirmation",
+    "severity": "all",
+    "subject": "Confirmation: Covenant Breach Cured - {{series_name}} (ISIN: {{isin}})",
+    "body": "Dear Sir/Madam,\n\nWith reference to our breach notice dated {{notice_date}} regarding {{covenant_name}}, we are pleased to confirm that based on the financial information provided for {{testing_period}}, the covenant breach has been CURED.\n\nDetails:\nCovenant: {{covenant_name}}\nPrevious Value (Breach): {{previous_value}} {{unit}}\nCurrent Value: {{current_value}} {{unit}}\nRequired Threshold: {{comparison_display}} {{threshold}} {{unit}}\nStatus: COMPLIANT\n\nThe breach has been cured within the cure period and no further action is required at this time.\n\nWe appreciate the Company's prompt attention to this matter and look forward to continued compliance with the Trust Deed covenants.\n\nYours faithfully,\nFor Axis Trustee Services Limited\n\nAuthorized Signatory",
+    "is_active": true
+  },
+  {
+    "id": "NT006",
+    "name": "Financial Submission Reminder",
+    "type": "reminder",
+    "severity": "all",
+    "subject": "Reminder: Quarterly Financial Submission Due - {{series_name}}",
+    "body": "Dear Sir/Madam,\n\nThis is a reminder that the quarterly financial statements for {{testing_period}} are due for submission for covenant testing under the Trust Deed dated {{trust_deed_date}}.\n\nIssue Details:\nSeries: {{series_name}}\nISIN: {{isin}}\nSubmission Due Date: {{due_date}}\n\nPlease ensure submission of:\n1. Audited/Limited Review quarterly financial statements\n2. Compliance certificate signed by CFO/Company Secretary\n3. Any material changes to security or business operations\n\nTimely submission helps us complete covenant testing and maintain compliance records as required under SEBI regulations.\n\nYours faithfully,\nFor Axis Trustee Services Limited\n\nAuthorized Signatory",
+    "is_active": true
+  }
+]

@@ -1,0 +1,490 @@
+[
+  {
+    "id": "IC001",
+    "issue_id": "NCD001",
+    "issuer_id": "ISS001",
+    "covenants": [
+      {
+        "covenant_id": "COV001",
+        "threshold": 2.0,
+        "cure_period_days": 30,
+        "trust_deed_section": "8.2(a)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV002",
+        "threshold": 1.5,
+        "cure_period_days": 30,
+        "trust_deed_section": "8.2(b)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV003",
+        "threshold": 1.2,
+        "cure_period_days": 30,
+        "trust_deed_section": "8.2(c)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV004",
+        "threshold": 1.25,
+        "cure_period_days": 45,
+        "trust_deed_section": "8.2(d)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV005",
+        "threshold": 1.25,
+        "cure_period_days": 30,
+        "trust_deed_section": "8.3(a)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV006",
+        "threshold": 5000,
+        "cure_period_days": 60,
+        "trust_deed_section": "8.2(e)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      }
+    ]
+  },
+  {
+    "id": "IC002",
+    "issue_id": "NCD002",
+    "issuer_id": "ISS001",
+    "covenants": [
+      {
+        "covenant_id": "COV001",
+        "threshold": 2.5,
+        "cure_period_days": 30,
+        "trust_deed_section": "7.1(a)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV002",
+        "threshold": 1.5,
+        "cure_period_days": 30,
+        "trust_deed_section": "7.1(b)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV003",
+        "threshold": 1.0,
+        "cure_period_days": 30,
+        "trust_deed_section": "7.1(c)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV007",
+        "threshold": 4.0,
+        "cure_period_days": 45,
+        "trust_deed_section": "7.1(d)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      }
+    ]
+  },
+  {
+    "id": "IC003",
+    "issue_id": "NCD003",
+    "issuer_id": "ISS002",
+    "covenants": [
+      {
+        "covenant_id": "COV001",
+        "threshold": 1.5,
+        "cure_period_days": 45,
+        "trust_deed_section": "6.2(a)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 15 },
+          "material": { "deviation_pct": 30 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV002",
+        "threshold": 2.0,
+        "cure_period_days": 45,
+        "trust_deed_section": "6.2(b)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 15 },
+          "material": { "deviation_pct": 30 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV006",
+        "threshold": 50000,
+        "cure_period_days": 60,
+        "trust_deed_section": "6.2(c)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      }
+    ]
+  },
+  {
+    "id": "IC004",
+    "issue_id": "NCD004",
+    "issuer_id": "ISS003",
+    "covenants": [
+      {
+        "covenant_id": "COV001",
+        "threshold": 2.0,
+        "cure_period_days": 30,
+        "trust_deed_section": "9.1(a)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV002",
+        "threshold": 1.75,
+        "cure_period_days": 30,
+        "trust_deed_section": "9.1(b)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV003",
+        "threshold": 1.1,
+        "cure_period_days": 30,
+        "trust_deed_section": "9.1(c)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV005",
+        "threshold": 1.5,
+        "cure_period_days": 30,
+        "trust_deed_section": "9.2(a)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV007",
+        "threshold": 3.5,
+        "cure_period_days": 45,
+        "trust_deed_section": "9.1(d)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      }
+    ]
+  },
+  {
+    "id": "IC005",
+    "issue_id": "NCD005",
+    "issuer_id": "ISS004",
+    "covenants": [
+      {
+        "covenant_id": "COV001",
+        "threshold": 6.0,
+        "cure_period_days": 30,
+        "trust_deed_section": "8.1(a)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV013",
+        "threshold": 3.0,
+        "cure_period_days": 45,
+        "trust_deed_section": "8.1(b)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 20 },
+          "material": { "deviation_pct": 40 },
+          "critical": { "deviation_pct": 60 }
+        }
+      },
+      {
+        "covenant_id": "COV014",
+        "threshold": 15,
+        "cure_period_days": 60,
+        "trust_deed_section": "8.1(c)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 20 },
+          "critical": { "deviation_pct": 30 }
+        }
+      },
+      {
+        "covenant_id": "COV006",
+        "threshold": 10000,
+        "cure_period_days": 60,
+        "trust_deed_section": "8.1(d)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      }
+    ]
+  },
+  {
+    "id": "IC006",
+    "issue_id": "NCD006",
+    "issuer_id": "ISS004",
+    "covenants": [
+      {
+        "covenant_id": "COV001",
+        "threshold": 6.5,
+        "cure_period_days": 30,
+        "trust_deed_section": "7.2(a)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV013",
+        "threshold": 4.0,
+        "cure_period_days": 45,
+        "trust_deed_section": "7.2(b)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 20 },
+          "material": { "deviation_pct": 40 },
+          "critical": { "deviation_pct": 60 }
+        }
+      },
+      {
+        "covenant_id": "COV014",
+        "threshold": 15,
+        "cure_period_days": 60,
+        "trust_deed_section": "7.2(c)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 20 },
+          "critical": { "deviation_pct": 30 }
+        }
+      }
+    ]
+  },
+  {
+    "id": "IC007",
+    "issue_id": "NCD007",
+    "issuer_id": "ISS005",
+    "covenants": [
+      {
+        "covenant_id": "COV001",
+        "threshold": 1.5,
+        "cure_period_days": 45,
+        "trust_deed_section": "6.1(a)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 15 },
+          "material": { "deviation_pct": 30 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV002",
+        "threshold": 2.5,
+        "cure_period_days": 45,
+        "trust_deed_section": "6.1(b)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 15 },
+          "material": { "deviation_pct": 30 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV006",
+        "threshold": 25000,
+        "cure_period_days": 60,
+        "trust_deed_section": "6.1(c)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      }
+    ]
+  },
+  {
+    "id": "IC008",
+    "issue_id": "NCD008",
+    "issuer_id": "ISS006",
+    "covenants": [
+      {
+        "covenant_id": "COV001",
+        "threshold": 5.0,
+        "cure_period_days": 30,
+        "trust_deed_section": "8.3(a)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV013",
+        "threshold": 5.0,
+        "cure_period_days": 45,
+        "trust_deed_section": "8.3(b)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 20 },
+          "material": { "deviation_pct": 40 },
+          "critical": { "deviation_pct": 60 }
+        }
+      },
+      {
+        "covenant_id": "COV014",
+        "threshold": 15,
+        "cure_period_days": 60,
+        "trust_deed_section": "8.3(c)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 20 },
+          "critical": { "deviation_pct": 30 }
+        }
+      },
+      {
+        "covenant_id": "COV002",
+        "threshold": 1.5,
+        "cure_period_days": 30,
+        "trust_deed_section": "8.3(d)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      }
+    ]
+  },
+  {
+    "id": "IC009",
+    "issue_id": "NCD009",
+    "issuer_id": "ISS007",
+    "covenants": [
+      {
+        "covenant_id": "COV001",
+        "threshold": 8.0,
+        "cure_period_days": 30,
+        "trust_deed_section": "7.1(a)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV014",
+        "threshold": 15,
+        "cure_period_days": 60,
+        "trust_deed_section": "7.1(b)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 20 },
+          "critical": { "deviation_pct": 30 }
+        }
+      },
+      {
+        "covenant_id": "COV006",
+        "threshold": 15000,
+        "cure_period_days": 60,
+        "trust_deed_section": "7.1(c)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      }
+    ]
+  },
+  {
+    "id": "IC010",
+    "issue_id": "NCD010",
+    "issuer_id": "ISS008",
+    "covenants": [
+      {
+        "covenant_id": "COV001",
+        "threshold": 5.5,
+        "cure_period_days": 30,
+        "trust_deed_section": "9.2(a)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      },
+      {
+        "covenant_id": "COV013",
+        "threshold": 6.0,
+        "cure_period_days": 45,
+        "trust_deed_section": "9.2(b)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 20 },
+          "material": { "deviation_pct": 40 },
+          "critical": { "deviation_pct": 60 }
+        }
+      },
+      {
+        "covenant_id": "COV002",
+        "threshold": 1.25,
+        "cure_period_days": 30,
+        "trust_deed_section": "9.2(c)",
+        "severity_rules": {
+          "technical": { "deviation_pct": 10 },
+          "material": { "deviation_pct": 25 },
+          "critical": { "deviation_pct": 50 }
+        }
+      }
+    ]
+  }
+]
