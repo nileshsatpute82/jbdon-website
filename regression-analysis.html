@@ -1,91 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TE24YQT1P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-8TE24YQT1P');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Regression Analysis: Linear Regression Guide | JBDON</title>
+<meta name="description" content="Master regression analysis - simple and multiple linear regression, OLS, R-squared interpretation, assumptions, and business applications.">
+<meta name="keywords" content="regression analysis, linear regression, OLS, R squared, multiple regression, statistics">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jbdon.com/regression-analysis.html">
+<meta property="og:title" content="Regression Analysis: Complete Guide">
+<meta property="og:description" content="Master regression analysis with OLS, R-squared, and business applications.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jbdon.com/regression-analysis.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Regression Analysis","description":"Master linear regression for business analytics.","author":{"@type":"Organization","name":"JBDON"}}
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Regression Analysis | JBDON</title>
-    <meta name="description" content="Regression Analysis - Strategic insights for business professionals from JBDON.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TE24YQT1P"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8TE24YQT1P');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="site-header"></div>
-    
-    <div class="page-with-sidebar">
-        <div id="site-sidebar"></div>
-        
-        <main class="article-main">
-            <div class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="separator">/</span>
-                <span>Analytics</span>
-                <span class="separator">/</span>
-                <span>Regression Analysis</span>
-            </div>
-            
-            <div class="article-hero">
-                <span class="category-badge">Analytics</span>
-                <h1>Regression Analysis</h1>
-            </div>
-            
-            <div class="article-content">
-                <div class="diagram-container">
-                    <div class="diagram-title">Analytics Process</div>
-                    <div class="diagram-flow">
-                        <div class="diagram-box">Collect</div>
-                        <span class="diagram-arrow">→</span>
-                        <div class="diagram-box">Analyze</div>
-                        <span class="diagram-arrow">→</span>
-                        <div class="diagram-box highlight">Insight</div>
-                        <span class="diagram-arrow">→</span>
-                        <div class="diagram-box accent">Action</div>
-                    </div>
-                </div>
-                
-                <div class="article-body">
-                    <p>Regression analysis examines relationships between variables for understanding and prediction.</p>
-                    <p>Simple Regression models Y = a + bX + error, with slope showing change in Y per unit X.</p>
-                    <p>Multiple Regression includes several predictors, showing effects while controlling for others.</p>
-                    <p>Model Evaluation uses R-squared, F-tests, and residual analysis.</p>
-                    <p>Interpretation requires distinguishing association from causation and statistical from practical significance.</p>
-                    <div id="share-buttons"></div>
-                </div>
-                
-                <div class="related-articles">
-                    <h3>Continue Reading</h3>
-                    <div class="related-grid">
-                        <a href="data-visualization.html" class="related-card">
-                            <div class="card-category">Analytics</div>
-                            <h4>Data Visualization</h4>
-                            <p>Create effective visual displays</p>
-                        </a>
-                        <a href="customer-analytics.html" class="related-card">
-                            <div class="card-category">Analytics</div>
-                            <h4>Customer Analytics</h4>
-                            <p>Understand customer behavior</p>
-                        </a>
-                        <a href="ab-testing-introduction.html" class="related-card">
-                            <div class="card-category">Analytics</div>
-                            <h4>A/B Testing</h4>
-                            <p>Design better experiments</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-    
-    <div id="site-footer"></div>
-    <script src="components.js"></script>
+<div id="site-header"></div>
+<div class="page-with-sidebar"><div id="site-sidebar"></div>
+<main class="article-main">
+<div class="breadcrumb"><a href="index.html">Home</a><span class="separator">/</span><span>Analytics</span><span class="separator">/</span><span>Regression</span></div>
+<article class="article-hero"><span class="category-badge">ANALYTICS</span><h1>Regression Analysis</h1></article>
+<div class="article-content">
+<div class="article-body">
+<nav class="toc-box"><h3>In This Article</h3>
+<ol><li><a href="#introduction">Introduction</a></li><li><a href="#simple">Simple Regression</a></li><li><a href="#multiple">Multiple Regression</a></li><li><a href="#assumptions">Assumptions</a></li><li><a href="#interpretation">Interpretation</a></li><li><a href="#conclusion">Conclusion</a></li></ol></nav>
+
+<section id="introduction">
+<h2>Introduction</h2>
+<p>Regression analysis models the relationship between a dependent variable (Y) and one or more independent variables (X). It's one of the most widely used tools in business analytics for prediction and understanding relationships.</p>
+</section>
+
+<hr class="section-divider">
+
+<section id="simple">
+<h2>Simple Linear Regression</h2>
+<div class="formula-box">
+<p><strong>Y = β₀ + β₁X + ε</strong></p>
+<p>β₀ = intercept, β₁ = slope, ε = error</p>
+</div>
+<div class="example-box"><h4>Example</h4><p>Sales = 100 + 5×Advertising<br>Base sales = ₹100; each ₹1 in advertising adds ₹5 in sales</p></div>
+</section>
+
+<hr class="section-divider">
+
+<section id="multiple">
+<h2>Multiple Regression</h2>
+<div class="formula-box">
+<p><strong>Y = β₀ + β₁X₁ + β₂X₂ + ... + βₙXₙ + ε</strong></p>
+</div>
+<p>Multiple regression allows you to control for other factors and understand relative importance of variables.</p>
+</section>
+
+<hr class="section-divider">
+
+<section id="assumptions">
+<h2>Key Assumptions</h2>
+<table class="comparison-table">
+<thead><tr><th>Assumption</th><th>Description</th></tr></thead>
+<tbody>
+<tr><td><strong>Linearity</strong></td><td>Relationship is linear</td></tr>
+<tr><td><strong>Independence</strong></td><td>Errors are independent</td></tr>
+<tr><td><strong>Homoscedasticity</strong></td><td>Constant error variance</td></tr>
+<tr><td><strong>Normality</strong></td><td>Errors normally distributed</td></tr>
+<tr><td><strong>No multicollinearity</strong></td><td>IVs not highly correlated</td></tr>
+</tbody></table>
+</section>
+
+<hr class="section-divider">
+
+<section id="interpretation">
+<h2>Interpreting Results</h2>
+<ul>
+<li><strong>R²:</strong> % of variance explained (0-1, higher is better)</li>
+<li><strong>p-value:</strong> Statistical significance (< 0.05)</li>
+<li><strong>Coefficients:</strong> Effect size per unit change in X</li>
+</ul>
+<div class="note-box"><strong>Warning:</strong> Correlation ≠ causation. High R² doesn't prove causality.</div>
+</section>
+
+<hr class="section-divider">
+
+<section id="conclusion">
+<h2>Conclusion</h2>
+<div class="key-points"><h3>Key Takeaways</h3>
+<ul>
+<li>Regression models <strong>relationship between Y and X</strong></li>
+<li><strong>OLS</strong> minimizes sum of squared errors</li>
+<li>Check <strong>assumptions</strong> before interpreting</li>
+<li><strong>R²</strong> shows variance explained</li>
+<li><strong>Correlation ≠ causation</strong></li>
+</ul></div>
+</section>
+
+<div id="share-buttons"></div></div>
+<div class="related-articles"><h3>Continue Reading</h3><div class="related-grid">
+<a href="ab-testing-introduction.html" class="related-card"><div class="card-category">Analytics</div><h4>A/B Testing</h4><p>Experimental methods</p></a>
+<a href="what-is-cluster-analysis.html" class="related-card"><div class="card-category">Analytics</div><h4>Cluster Analysis</h4><p>Segmentation</p></a>
+<a href="data-visualization.html" class="related-card"><div class="card-category">Analytics</div><h4>Data Visualization</h4><p>Charts and graphs</p></a>
+</div></div></div></main></div>
+<div id="site-footer"></div><script src="components.js"></script>
 </body>
 </html>

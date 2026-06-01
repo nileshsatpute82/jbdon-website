@@ -1,170 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TE24YQT1P"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-8TE24YQT1P');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A/B Testing: Complete Guide to Split Testing | JBDON</title>
+<meta name="description" content="Master A/B testing - hypothesis formation, sample size calculation, statistical significance, and running experiments for data-driven decisions.">
+<meta name="keywords" content="A/B testing, split testing, hypothesis testing, statistical significance, experiment design">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://jbdon.com/ab-testing-introduction.html">
+<meta property="og:title" content="A/B Testing: Complete Guide">
+<meta property="og:description" content="Master A/B testing for data-driven decisions.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jbdon.com/ab-testing-introduction.html">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"A/B Testing Introduction","description":"Complete guide to A/B testing and experimentation.","author":{"@type":"Organization","name":"JBDON"}}
 </script>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A/B Testing: Introduction | JBDON</title>
-    <meta name="description" content="A/B Testing: Introduction - Strategic insights for business professionals from JBDON.">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TE24YQT1P"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8TE24YQT1P');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="site-header"></div>
-    
-    <div class="page-with-sidebar">
-        <div id="site-sidebar"></div>
-        
-        <main class="article-main">
-            <div class="breadcrumb">
-                <a href="index.html">Home</a>
-                <span class="separator">/</span>
-                <span>Analytics</span>
-                <span class="separator">/</span>
-                <span>A/B Testing: Introduction</span>
-            </div>
-            
-            <div class="article-hero">
-                <span class="category-badge">Analytics</span>
-                <h1>A/B Testing: Introduction</h1>
-            </div>
-            
-            <div class="article-content">
-                <div class="diagram-container">
-                    <div class="diagram-title">Analytics Process</div>
-                    <div class="diagram-flow">
-                        <div class="diagram-box">Collect</div>
-                        <span class="diagram-arrow">→</span>
-                        <div class="diagram-box">Analyze</div>
-                        <span class="diagram-arrow">→</span>
-                        <div class="diagram-box highlight">Insight</div>
-                        <span class="diagram-arrow">→</span>
-                        <div class="diagram-box accent">Action</div>
-                    </div>
-                </div>
-                
-                <div class="article-body">
-<div class="diagram-container">
-    <div class="diagram-title">A/B Testing Process</div>
-    <div class="diagram-flow">
-        <div class="diagram-box">Hypothesis</div>
-        <span class="diagram-arrow">→</span>
-        <div class="diagram-box">Design Test</div>
-        <span class="diagram-arrow">→</span>
-        <div class="diagram-box highlight">Run Experiment</div>
-        <span class="diagram-arrow">→</span>
-        <div class="diagram-box">Analyze Results</div>
-        <span class="diagram-arrow">→</span>
-        <div class="diagram-box accent">Implement</div>
-    </div>
-</div>
+<div id="site-header"></div>
+<div class="page-with-sidebar"><div id="site-sidebar"></div>
+<main class="article-main">
+<div class="breadcrumb"><a href="index.html">Home</a><span class="separator">/</span><span>Analytics</span><span class="separator">/</span><span>A/B Testing</span></div>
+<article class="article-hero"><span class="category-badge">ANALYTICS</span><h1>A/B Testing Introduction</h1></article>
+<div class="article-content">
+<div class="diagram-container"><div class="diagram-title">A/B Test Process</div>
+<div class="diagram-flow"><div class="diagram-box">Hypothesis</div><span class="diagram-arrow">→</span><div class="diagram-box">Design</div><span class="diagram-arrow">→</span><div class="diagram-box highlight">Run</div><span class="diagram-arrow">→</span><div class="diagram-box accent">Analyze</div></div></div>
+<div class="article-body">
+<nav class="toc-box"><h3>In This Article</h3>
+<ol><li><a href="#what">What is A/B Testing?</a></li><li><a href="#process">The Process</a></li><li><a href="#statistics">Key Statistics</a></li><li><a href="#pitfalls">Common Pitfalls</a></li><li><a href="#conclusion">Conclusion</a></li></ol></nav>
 
-<div class="diagram-container">
-    <div class="diagram-title">Test Design Elements</div>
-    <div class="diagram-grid">
-        <div class="diagram-card">
-            <div class="diagram-card-title">Sample Size</div>
-            <div class="diagram-card-text">Calculate required users for statistical power</div>
-        </div>
-        <div class="diagram-card">
-            <div class="diagram-card-title">Control Group</div>
-            <div class="diagram-card-text">Baseline version for comparison</div>
-        </div>
-        <div class="diagram-card">
-            <div class="diagram-card-title">Treatment</div>
-            <div class="diagram-card-text">Variation being tested against control</div>
-        </div>
-        <div class="diagram-card">
-            <div class="diagram-card-title">Success Metric</div>
-            <div class="diagram-card-text">Primary KPI to measure impact</div>
-        </div>
-    </div>
-
-<p>A/B Testing is a process of comparing two groups – test group and control group.
-Two groups usually means two versions of some market asset. A market asset is something you want to research such as, if it's a webpage, a title, a layout of a design, a new marketing slogan or a phrase, a feature like the colour of a website button, a font, all these things are compared.
-The only difference between the two groups is that the test group has the treatment, and the control group does not. Test treatment is the variation you want to test.
-The test group has a change in only one element, such as a bold title vs normal title: <strong>A/B Testing</strong> vs A/B Testing.
-<strong>Use case of A/B Testing:</strong> Digital Marketing
-A/B Tetsing is used in digital marketing such as web page experiments. It allows us to test which feature achieves our goals better. For example, if we want to promote an ad and are designing a “Learn more” button, should we use a blue or a green button? Which one attracts more clicks?
-</p>
-
-<li>
-</li>
+<section id="what">
+<h2>What is A/B Testing?</h2>
+<p>A/B testing (split testing) compares two versions to determine which performs better. It's the gold standard for data-driven decisions.</p>
+<ul>
+<li><strong>Control (A):</strong> Current version</li>
+<li><strong>Treatment (B):</strong> Modified version</li>
+<li><strong>Random assignment:</strong> Users see A or B</li>
 </ul>
+</section>
 
+<hr class="section-divider">
+
+<section id="process">
+<h2>The A/B Testing Process</h2>
+<ol>
+<li><strong>Form Hypothesis:</strong> "Changing X will increase Y because Z"</li>
+<li><strong>Determine Metrics:</strong> Primary, secondary, guardrail</li>
+<li><strong>Calculate Sample Size:</strong> Before starting</li>
+<li><strong>Run Experiment:</strong> Random assignment, don't peek!</li>
+<li><strong>Analyze Results:</strong> Statistical significance</li>
+</ol>
+</section>
+
+<hr class="section-divider">
+
+<section id="statistics">
+<h2>Key Statistical Concepts</h2>
+<table class="comparison-table">
+<thead><tr><th>Concept</th><th>Definition</th><th>Typical</th></tr></thead>
+<tbody>
+<tr><td><strong>Significance (α)</strong></td><td>False positive probability</td><td>5%</td></tr>
+<tr><td><strong>Power (1-β)</strong></td><td>Detect true effect</td><td>80%</td></tr>
+<tr><td><strong>p-value</strong></td><td>Chance of result</td><td>< 0.05</td></tr>
+</tbody></table>
+</section>
+
+<hr class="section-divider">
+
+<section id="pitfalls">
+<h2>Common Pitfalls</h2>
 <ul>
-<li><strong style="background-color: initial;">Procedure of A/B Testing</strong>
-</li>
-
-<p></ul><ul><li>Select test treatment</li></ul> In this step, we select <em>one </em>independent variable that we want to test. In the “blue or green button” example, the colour of “Learn more” button is the only variable.
-We can test multiple variables, but only one at a time.</p>
-
-<ul>
-<li>Identify your goal/ determine a metric</li></ul> We need to identify the goal before running the test as it will define the metric to assess the test. The metric will also be the dependent variable in our test.
-In the “blue or green button” example, the goal of changing the colour is to encourage the users to click. The metric here is the total number of clicks.</p>
-
-<ul>
-<li>Create test & control group</li></ul><ul><li>Split your sample groups equally and randomly</li></ul> In a true experiment, we would want to create the test and control groups using random assignment.
-The following propositions are being assesses:
-<ul class="content-list">
-<li>If X then Y (if the button is green, clicks will increase)</li>
-<li>If not X then not Y (if the button is not green, clicks will not increase)</li>
+<li><strong>Peeking:</strong> Stopping early when you see desired result</li>
+<li><strong>Multiple comparisons:</strong> Testing many variants</li>
+<li><strong>Novelty effect:</strong> Users react to newness</li>
+<li><strong>Insufficient sample:</strong> Underpowered tests</li>
 </ul>
-This proves the cause of effectiveness.
-We have two equivalent groups and randomly assign subjects into the control and test groups. The control group is group A and the test group is group B.</p>
+</section>
 
-<ul>
-<li>Determine the sample size</li></ul> A/B Testing uses statistical significance to determine whether the test treatment contributes to the difference in metrics between the test group and the control group.
-Sample size is a key variable to determine the statistical significance level. Larger sample size à higher confidence level. Thus, before the test, sample size should be determined.
-Common statistical significance level = 5% and confidence level = 95%.
-The formula to determine the sample size of each group is:
-Where,
-n = number of subjects in each group
-Z (a/2) = critical value of significance criterion
-= significance level
-S2 = sample estimate of variance. Rough estimate is d = (largest value – smallest value)/4
-E = effective size</p>
+<hr class="section-divider">
 
+<section id="conclusion">
+<h2>Conclusion</h2>
+<div class="key-points"><h3>Key Takeaways</h3>
 <ul>
-<li>Collect data and data analysis</li></ul><ul><li>Ensure enough time to obtain substantial data</li><li>Avoid conflicts between your test and other team’s test, project, or the company’s business plan</li><li>Have a comprehensive data storage and back-up plan to ensure reproducibility</li></ul> <ul><li>Hypothesis Testing</li>
-</ul>
-                    <div id="share-buttons"></div>
-                </div>
-                
-                <div class="related-articles">
-                    <h3>Continue Reading</h3>
-                    <div class="related-grid">
-                        <a href="data-visualization.html" class="related-card">
-                            <div class="card-category">Analytics</div>
-                            <h4>Data Visualization</h4>
-                            <p>Create effective visual displays</p>
-                        </a>
-                        <a href="customer-analytics.html" class="related-card">
-                            <div class="card-category">Analytics</div>
-                            <h4>Customer Analytics</h4>
-                            <p>Understand customer behavior</p>
-                        </a>
-                        <a href="ab-testing-introduction.html" class="related-card">
-                            <div class="card-category">Analytics</div>
-                            <h4>A/B Testing</h4>
-                            <p>Design better experiments</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </main>
-    </div>
-    
-    <div id="site-footer"></div>
-    <script src="components.js"></script>
+<li>A/B testing: <strong>Control vs. Treatment</strong></li>
+<li><strong>Hypothesis first</strong>, then test</li>
+<li><strong>Don't peek</strong> - run full duration</li>
+<li><strong>p < 0.05</strong> = statistically significant</li>
+<li>Consider <strong>practical significance</strong> too</li>
+</ul></div>
+</section>
+
+<div id="share-buttons"></div></div>
+<div class="related-articles"><h3>Continue Reading</h3><div class="related-grid">
+<a href="regression-analysis.html" class="related-card"><div class="card-category">Analytics</div><h4>Regression</h4><p>Statistical modeling</p></a>
+<a href="customer-analytics.html" class="related-card"><div class="card-category">Analytics</div><h4>Customer Analytics</h4><p>RFM, CLV</p></a>
+<a href="data-visualization.html" class="related-card"><div class="card-category">Analytics</div><h4>Visualization</h4><p>Charts and graphs</p></a>
+</div></div></div></main></div>
+<div id="site-footer"></div><script src="components.js"></script>
 </body>
 </html>
