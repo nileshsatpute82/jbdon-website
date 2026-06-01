@@ -3,22 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>JBDON | Business Knowledge for Global Leaders</title>
-<meta name="description" content="Strategic insights and timeless business wisdom for ambitious professionals. 155+ articles on Analytics, Strategy, Economics, Marketing and Leadership.">
-<meta name="keywords" content="MBA knowledge base, business strategy, marketing management, business analytics, leadership, Porter Five Forces, SWOT analysis">
+<title>JBDON | Business News for Management Professionals</title>
+<meta name="description" content="Curated business news for MBA students and management professionals. Strategy, M&A, Startups, Markets, Leadership & AI in Business.">
+<meta name="keywords" content="business news, MBA news, management news, strategy news, startup news, M&A news">
 <meta name="author" content="JBDON">
 <meta name="robots" content="index, follow">
 <link rel="canonical" href="https://jbdon.com/">
-<meta property="og:title" content="JBDON | Business Knowledge for Global Leaders">
-<meta property="og:description" content="Strategic insights and timeless business wisdom. 155+ articles on Strategy, Marketing, Economics, Analytics & Leadership.">
+<meta property="og:title" content="JBDON | Business News for Management Professionals">
+<meta property="og:description" content="Curated business news for MBA students and management professionals.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://jbdon.com/">
 <meta property="og:site_name" content="JBDON">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="JBDON - Business Knowledge for Global Leaders">
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","name":"JBDON","description":"Business Knowledge for Global Leaders","url":"https://jbdon.com/","publisher":{"@type":"Organization","name":"JBDON"}}
-</script>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-8TE24YQT1P"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-8TE24YQT1P');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,308 +22,508 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 <style>
-    body { background: var(--cream); }
-    
-    .hero {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
-        background: linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 100%);
-        padding: 80px 24px 60px;
-        margin-top: var(--nav-height);
-    }
-    .hero-inner { max-width: 700px; }
-    .hero-badge {
-        display: inline-block;
-        padding: 6px 16px;
-        background: rgba(201, 169, 98, 0.15);
-        border: 1px solid rgba(201, 169, 98, 0.3);
-        border-radius: 50px;
-        color: var(--accent);
-        font-size: 0.8rem;
-        font-weight: 500;
-        margin-bottom: 20px;
-    }
-    .hero h1 {
-        font-size: 2.75rem;
-        color: var(--white);
-        margin-bottom: 16px;
-        line-height: 1.1;
-    }
-    .hero h1 span { color: var(--accent); }
-    .hero-subtitle {
-        font-size: 1.05rem;
-        color: rgba(255,255,255,0.7);
-        line-height: 1.6;
-        margin-bottom: 28px;
-    }
-    .hero-cta { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
-    .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 6px;
-        padding: 12px 24px;
-        font-size: 0.9rem;
-        font-weight: 600;
-        border-radius: 8px;
-        cursor: pointer;
-        transition: all 0.2s;
-        border: none;
-        text-decoration: none;
-    }
-    .btn-primary { background: var(--accent); color: var(--primary); }
-    .btn-primary:hover { background: var(--accent-light); transform: translateY(-2px); }
-    .btn-secondary { background: transparent; color: var(--white); border: 1px solid rgba(255,255,255,0.3); }
-    .btn-secondary:hover { background: rgba(255,255,255,0.1); }
+:root {
+    --news-red: #c41e3a;
+    --news-red-light: #e8354f;
+}
+body { background: var(--cream); }
 
-    .categories { padding: 48px 24px; background: var(--cream); }
-    .categories-inner { max-width: var(--container-max); margin: 0 auto; }
-    .section-header { text-align: center; margin-bottom: 32px; }
-    .section-header h2 { margin-bottom: 8px; font-size: 1.75rem; }
-    .section-header p { color: var(--gray-500); font-size: 0.95rem; }
-    .categories-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; }
-    .category-card {
-        background: var(--white);
-        border-radius: 12px;
-        padding: 24px 16px;
-        text-align: center;
-        transition: all 0.2s;
-        border: 1px solid var(--gray-200);
-        text-decoration: none;
-        color: inherit;
-    }
-    .category-card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); border-color: var(--accent); }
-    .category-card h3 { font-family: var(--font-body); font-size: 0.95rem; font-weight: 600; margin-bottom: 4px; }
-    .category-card p { font-size: 0.8rem; color: var(--gray-500); margin-bottom: 8px; display: none; }
-    .category-count { font-size: 0.75rem; font-weight: 600; color: var(--accent-dark); }
+/* Breaking News Ticker */
+.ticker-wrap {
+    background: var(--primary);
+    padding: 10px 0;
+    margin-top: var(--nav-height);
+    overflow: hidden;
+}
+.ticker {
+    display: flex;
+    animation: ticker 30s linear infinite;
+}
+.ticker-item {
+    flex-shrink: 0;
+    padding: 0 40px;
+    color: var(--white);
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+.ticker-item::before {
+    content: "•";
+    color: var(--accent);
+    margin-right: 12px;
+}
+@keyframes ticker {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
 
-    .featured { padding: 48px 24px; background: var(--white); }
-    .featured-inner { max-width: var(--container-max); margin: 0 auto; }
-    .featured-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: 24px; }
-    .featured-main {
-        background: var(--primary);
-        border-radius: 12px;
-        padding: 32px;
-        color: var(--white);
-        text-decoration: none;
-        display: block;
-    }
-    .featured-main:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
-    .featured-main .article-category {
-        display: inline-block;
-        padding: 4px 10px;
-        background: rgba(201, 169, 98, 0.2);
-        color: var(--accent);
-        font-size: 0.7rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        border-radius: 4px;
-        margin-bottom: 14px;
-    }
-    .featured-main h3 { font-size: 1.4rem; color: var(--white); margin-bottom: 12px; }
-    .featured-main p { color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 16px; }
-    .article-meta { display: flex; gap: 8px; font-size: 0.8rem; color: rgba(255,255,255,0.5); }
-    .featured-sidebar { display: flex; flex-direction: column; gap: 12px; }
-    .article-card {
-        background: var(--gray-50);
-        border-radius: 10px;
-        padding: 18px;
-        transition: all 0.2s;
-        border: 1px solid var(--gray-100);
-        text-decoration: none;
-        color: inherit;
-    }
-    .article-card:hover { background: var(--white); border-color: var(--accent); }
-    .article-card .article-category {
-        font-size: 0.65rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        color: var(--accent-dark);
-        margin-bottom: 6px;
-    }
-    .article-card h4 { font-family: var(--font-body); font-size: 0.9rem; font-weight: 600; margin-bottom: 4px; }
-    .article-card p { font-size: 0.8rem; color: var(--gray-500); }
+/* Hero News */
+.news-hero {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 30px 24px;
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    gap: 24px;
+}
+.hero-main {
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    border-radius: 16px;
+    padding: 40px;
+    color: var(--white);
+    position: relative;
+    overflow: hidden;
+    min-height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.hero-main::before {
+    content: "";
+    position: absolute;
+    top: 0; right: 0;
+    width: 200px; height: 200px;
+    background: radial-gradient(circle, rgba(201,169,98,0.15) 0%, transparent 70%);
+}
+.hero-main .category-tag {
+    display: inline-block;
+    background: var(--news-red);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+.hero-main h2 {
+    font-size: 1.9rem;
+    line-height: 1.25;
+    margin-bottom: 14px;
+    color: var(--white);
+}
+.hero-main p {
+    color: rgba(255,255,255,0.75);
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+.hero-main .meta {
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.5);
+}
+.hero-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.sidebar-card {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--gray-200);
+    transition: all 0.2s;
+    text-decoration: none;
+    color: inherit;
+    flex: 1;
+}
+.sidebar-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+.sidebar-card .category-tag {
+    display: inline-block;
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--news-red);
+    margin-bottom: 10px;
+    letter-spacing: 0.3px;
+}
+.sidebar-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    font-family: var(--font-body);
+}
+.sidebar-card p {
+    font-size: 0.85rem;
+    color: var(--gray-500);
+    line-height: 1.5;
+}
+.sidebar-card .meta {
+    font-size: 0.75rem;
+    color: var(--gray-400);
+    margin-top: 10px;
+}
 
-    .topics { padding: 48px 24px; background: var(--cream); }
-    .topics-inner { max-width: var(--container-max); margin: 0 auto; }
-    .topics-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
-    .topic-card {
-        display: flex;
-        align-items: center;
-        gap: 12px;
-        background: var(--white);
-        border-radius: 10px;
-        padding: 14px;
-        transition: all 0.2s;
-        border: 1px solid var(--gray-200);
-        text-decoration: none;
-        color: inherit;
-    }
-    .topic-card:hover { border-color: var(--accent); transform: translateX(3px); }
-    .topic-content h4 { font-family: var(--font-body); font-size: 0.85rem; font-weight: 600; margin-bottom: 2px; }
-    .topic-content p { font-size: 0.75rem; color: var(--gray-500); }
+/* Category Tabs */
+.category-tabs {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 24px 20px;
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.cat-tab {
+    padding: 8px 18px;
+    background: var(--white);
+    border: 1px solid var(--gray-200);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--gray-600);
+    cursor: pointer;
+    transition: all 0.2s;
+    text-decoration: none;
+}
+.cat-tab:hover, .cat-tab.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
 
-    @media (max-width: 1024px) {
-        .categories-grid { grid-template-columns: repeat(3, 1fr); }
-        .featured-grid { grid-template-columns: 1fr; }
-        .topics-grid { grid-template-columns: repeat(2, 1fr); }
-    }
-    @media (max-width: 600px) {
-        .hero h1 { font-size: 2rem; }
-        .categories-grid { grid-template-columns: repeat(2, 1fr); }
-        .topics-grid { grid-template-columns: 1fr; }
-    }
+/* News Grid */
+.news-section {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 20px 24px 50px;
+}
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid var(--gray-200);
+}
+.section-header h2 {
+    font-size: 1.3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.section-header h2::before {
+    content: "";
+    width: 4px;
+    height: 24px;
+    background: var(--news-red);
+    border-radius: 2px;
+}
+.view-all {
+    font-size: 0.85rem;
+    color: var(--accent-dark);
+    text-decoration: none;
+    font-weight: 500;
+}
+.view-all:hover { text-decoration: underline; }
+
+.news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.news-card {
+    background: var(--white);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid var(--gray-200);
+    transition: all 0.2s;
+    text-decoration: none;
+    color: inherit;
+}
+.news-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-md);
+}
+.news-card-img {
+    height: 140px;
+    background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--gray-400);
+    font-size: 2rem;
+}
+.news-card-body {
+    padding: 16px;
+}
+.news-card .category-tag {
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--news-red);
+    margin-bottom: 8px;
+    display: block;
+}
+.news-card h3 {
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 8px;
+    font-family: var(--font-body);
+}
+.news-card p {
+    font-size: 0.8rem;
+    color: var(--gray-500);
+    line-height: 1.5;
+}
+.news-card .meta {
+    font-size: 0.7rem;
+    color: var(--gray-400);
+    margin-top: 10px;
+}
+
+/* Knowledge CTA */
+.knowledge-cta {
+    background: var(--primary);
+    padding: 50px 24px;
+    text-align: center;
+}
+.knowledge-cta h2 {
+    color: var(--white);
+    font-size: 1.6rem;
+    margin-bottom: 12px;
+}
+.knowledge-cta p {
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 24px;
+}
+.knowledge-cta .btn {
+    display: inline-block;
+    padding: 14px 32px;
+    background: var(--accent);
+    color: var(--primary);
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: all 0.2s;
+}
+.knowledge-cta .btn:hover {
+    background: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+@media (max-width: 1024px) {
+    .news-hero { grid-template-columns: 1fr; }
+    .news-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .hero-main { min-height: 280px; padding: 24px; }
+    .hero-main h2 { font-size: 1.4rem; }
+    .news-grid { grid-template-columns: 1fr; }
+    .category-tabs { gap: 6px; }
+    .cat-tab { padding: 6px 14px; font-size: 0.8rem; }
+}
 </style>
 </head>
 <body>
-    <div id="site-header"></div>
+<div id="site-header"></div>
 
-    <section class="hero">
-        <div class="hero-inner">
-            <div class="hero-badge">For Ambitious Professionals</div>
-            <h1>Where Global Leaders Find <span>Strategic Insight</span></h1>
-            <p class="hero-subtitle">Discover timeless principles and cutting-edge ideas on strategy, innovation, and leadership — curated wisdom from the world's foremost business thinkers.</p>
-            <div class="hero-cta">
-                <a href="porters-five-forces-model.html" class="btn btn-primary">Start Exploring</a>
-                <a href="#categories" class="btn btn-secondary">Browse Topics</a>
-            </div>
-        </div>
-    </section>
+<!-- Breaking News Ticker -->
+<div class="ticker-wrap">
+    <div class="ticker">
+        <span class="ticker-item">Anthropic raises $2B in latest funding round at $60B valuation</span>
+        <span class="ticker-item">India's GDP growth forecast revised to 6.8% for FY26</span>
+        <span class="ticker-item">Reliance-Disney merger creates India's largest media company</span>
+        <span class="ticker-item">OpenAI launches GPT-5 with enhanced reasoning capabilities</span>
+        <span class="ticker-item">RBI maintains repo rate at 6.5% amid inflation concerns</span>
+        <span class="ticker-item">Anthropic raises $2B in latest funding round at $60B valuation</span>
+        <span class="ticker-item">India's GDP growth forecast revised to 6.8% for FY26</span>
+        <span class="ticker-item">Reliance-Disney merger creates India's largest media company</span>
+    </div>
+</div>
 
-    <section class="categories" id="categories">
-        <div class="categories-inner">
-            <div class="section-header">
-                <h2>Explore by Discipline</h2>
-                <p>Deep-dive into the areas that matter most for your professional growth</p>
-            </div>
-            <div class="categories-grid">
-                <a href="data-visualization.html" class="category-card">
-                    <h3>Analytics</h3>
-                    <span class="category-count">45 Articles</span>
-                </a>
-                <a href="positioning.html" class="category-card">
-                    <h3>Marketing</h3>
-                    <span class="category-count">35 Articles</span>
-                </a>
-                <a href="porters-five-forces-model.html" class="category-card">
-                    <h3>Strategy</h3>
-                    <span class="category-count">30 Articles</span>
-                </a>
-                <a href="demand-elasticity.html" class="category-card">
-                    <h3>Economics</h3>
-                    <span class="category-count">25 Articles</span>
-                </a>
-                <a href="human-resource-management.html" class="category-card">
-                    <h3>Finance</h3>
-                    <span class="category-count">8 Articles</span>
-                </a>
-                <a href="change-management.html" class="category-card">
-                    <h3>Leadership</h3>
-                    <span class="category-count">20 Articles</span>
-                </a>
-            </div>
-        </div>
-    </section>
+<!-- Hero News Section -->
+<section class="news-hero">
+    <div class="hero-main">
+        <span class="category-tag">Strategy & M&A</span>
+        <h2>Tata Group's Strategic Pivot: From Steel Giant to Tech Powerhouse</h2>
+        <p>How N. Chandrasekaran is reshaping India's oldest conglomerate through aggressive digital investments and strategic acquisitions in semiconductors, EVs, and AI.</p>
+        <div class="meta">5 hours ago • 8 min read</div>
+    </div>
+    <div class="hero-sidebar">
+        <a href="#" class="sidebar-card">
+            <span class="category-tag">Startup & VC</span>
+            <h3>Peak XV Partners Leads $120M Round in B2B SaaS Unicorn</h3>
+            <p>Enterprise software startup reaches $1.5B valuation</p>
+            <div class="meta">2 hours ago</div>
+        </a>
+        <a href="#" class="sidebar-card">
+            <span class="category-tag">Tech & AI</span>
+            <h3>Microsoft Copilot Adoption Surges 300% in Enterprise</h3>
+            <p>AI assistants becoming standard in corporate workflows</p>
+            <div class="meta">4 hours ago</div>
+        </a>
+        <a href="#" class="sidebar-card">
+            <span class="category-tag">Markets</span>
+            <h3>Sensex Hits Record High on FII Inflows</h3>
+            <p>Banking and IT stocks lead the rally amid positive global cues</p>
+            <div class="meta">1 hour ago</div>
+        </a>
+    </div>
+</section>
 
-    <section class="featured">
-        <div class="featured-inner">
-            <div class="section-header">
-                <h2>Featured Insights</h2>
-                <p>Essential reading for today's business leaders</p>
-            </div>
-            <div class="featured-grid">
-                <a href="porters-five-forces-model.html" class="featured-main">
-                    <span class="article-category">Strategy</span>
-                    <h3>Porter's Five Forces: The Framework That Changed Strategy</h3>
-                    <p>Michael Porter's iconic model for analyzing industry competition and profitability. Essential for strategic planning.</p>
-                    <div class="article-meta">
-                        <span>Competitive Analysis</span>
-                        <span>•</span>
-                        <span>12 min read</span>
-                    </div>
-                </a>
-                <div class="featured-sidebar">
-                    <a href="swot-analysis.html" class="article-card">
-                        <div class="article-category">Strategy</div>
-                        <h4>SWOT Analysis & TOWS Matrix</h4>
-                        <p>Convert analysis into actionable strategy</p>
-                    </a>
-                    <a href="bcg-growth-share-matrix.html" class="article-card">
-                        <div class="article-category">Strategy</div>
-                        <h4>BCG Growth-Share Matrix</h4>
-                        <p>Stars, Cash Cows, Dogs & Question Marks</p>
-                    </a>
-                    <a href="demand-elasticity.html" class="article-card">
-                        <div class="article-category">Economics</div>
-                        <h4>Price Elasticity of Demand</h4>
-                        <p>Optimize pricing with elasticity analysis</p>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- Category Tabs -->
+<div class="category-tabs">
+    <a href="#" class="cat-tab active">All News</a>
+    <a href="#" class="cat-tab">Strategy & M&A</a>
+    <a href="#" class="cat-tab">Startup & VC</a>
+    <a href="#" class="cat-tab">Markets & Economy</a>
+    <a href="#" class="cat-tab">Leadership</a>
+    <a href="#" class="cat-tab">Tech & AI</a>
+</div>
 
-    <section class="topics">
-        <div class="topics-inner">
-            <div class="section-header">
-                <h2>Popular Topics</h2>
-                <p>Most-read subjects by our professional community</p>
+<!-- Strategy & M&A Section -->
+<section class="news-section">
+    <div class="section-header">
+        <h2>Strategy & M&A</h2>
+        <a href="#" class="view-all">View All →</a>
+    </div>
+    <div class="news-grid">
+        <a href="#" class="news-card">
+            <div class="news-card-img">📊</div>
+            <div class="news-card-body">
+                <span class="category-tag">M&A</span>
+                <h3>Adani Group Explores Acquisition of Cement Assets in Africa</h3>
+                <p>Expansion strategy targets emerging markets with high growth potential</p>
+                <div class="meta">6 hours ago</div>
             </div>
-            <div class="topics-grid">
-                <a href="ab-testing-introduction.html" class="topic-card">
-                    <div class="topic-content">
-                        <h4>A/B Testing</h4>
-                        <p>Experiment design and analysis</p>
-                    </div>
-                </a>
-                <a href="the-value-chain.html" class="topic-card">
-                    <div class="topic-content">
-                        <h4>Value Chain Analysis</h4>
-                        <p>Competitive advantage framework</p>
-                    </div>
-                </a>
-                <a href="regression-analysis.html" class="topic-card">
-                    <div class="topic-content">
-                        <h4>Regression Analysis</h4>
-                        <p>Predictive modeling fundamentals</p>
-                    </div>
-                </a>
-                <a href="ansoffrsquos-matrix.html" class="topic-card">
-                    <div class="topic-content">
-                        <h4>Ansoff's Matrix</h4>
-                        <p>Growth strategy options</p>
-                    </div>
-                </a>
-                <a href="change-management.html" class="topic-card">
-                    <div class="topic-content">
-                        <h4>Change Management</h4>
-                        <p>Leading transformation</p>
-                    </div>
-                </a>
-                <a href="customer-analytics.html" class="topic-card">
-                    <div class="topic-content">
-                        <h4>Customer Analytics</h4>
-                        <p>RFM, CLV & segmentation</p>
-                    </div>
-                </a>
-                <a href="ge-matrix-or-mckinsey-matrix.html" class="topic-card">
-                    <div class="topic-content">
-                        <h4>GE McKinsey Matrix</h4>
-                        <p>9-cell portfolio analysis</p>
-                    </div>
-                </a>
-                <a href="new-product-development-npd-process.html" class="topic-card">
-                    <div class="topic-content">
-                        <h4>NPD Process</h4>
-                        <p>New product development stages</p>
-                    </div>
-                </a>
+        </a>
+        <a href="#" class="news-card">
+            <div class="news-card-img">🏢</div>
+            <div class="news-card-body">
+                <span class="category-tag">Strategy</span>
+                <h3>Infosys Restructures Business Units for AI-First Approach</h3>
+                <p>New operating model aligns 340,000 employees around generative AI</p>
+                <div class="meta">8 hours ago</div>
             </div>
-        </div>
-    </section>
+        </a>
+        <a href="#" class="news-card">
+            <div class="news-card-img">🤝</div>
+            <div class="news-card-body">
+                <span class="category-tag">M&A</span>
+                <h3>HDFC Bank-HDFC Merger: One Year Later</h3>
+                <p>Analyzing synergies and integration challenges of India's largest bank merger</p>
+                <div class="meta">12 hours ago</div>
+            </div>
+        </a>
+        <a href="#" class="news-card">
+            <div class="news-card-img">📈</div>
+            <div class="news-card-body">
+                <span class="category-tag">Strategy</span>
+                <h3>Mahindra's EV Playbook: Born Electric Strategy</h3>
+                <p>How the automaker is positioning for the electric future</p>
+                <div class="meta">1 day ago</div>
+            </div>
+        </a>
+    </div>
+</section>
 
-    <div id="site-footer"></div>
-    <script src="components.js"></script>
+<!-- Startup & VC Section -->
+<section class="news-section">
+    <div class="section-header">
+        <h2>Startup & VC</h2>
+        <a href="#" class="view-all">View All →</a>
+    </div>
+    <div class="news-grid">
+        <a href="#" class="news-card">
+            <div class="news-card-img">🚀</div>
+            <div class="news-card-body">
+                <span class="category-tag">Funding</span>
+                <h3>Zepto Raises $665M, Valuation Soars to $3.6B</h3>
+                <p>Quick commerce wars intensify as rivals scramble for market share</p>
+                <div class="meta">3 hours ago</div>
+            </div>
+        </a>
+        <a href="#" class="news-card">
+            <div class="news-card-img">💡</div>
+            <div class="news-card-body">
+                <span class="category-tag">IPO</span>
+                <h3>Swiggy IPO: What Investors Need to Know</h3>
+                <p>Deep dive into financials, unit economics, and growth trajectory</p>
+                <div class="meta">5 hours ago</div>
+            </div>
+        </a>
+        <a href="#" class="news-card">
+            <div class="news-card-img">🎯</div>
+            <div class="news-card-body">
+                <span class="category-tag">Startup</span>
+                <h3>India's SaaS Startups on Track for $50B ARR by 2030</h3>
+                <p>Report highlights explosive growth in enterprise software</p>
+                <div class="meta">7 hours ago</div>
+            </div>
+        </a>
+        <a href="#" class="news-card">
+            <div class="news-card-img">🌱</div>
+            <div class="news-card-body">
+                <span class="category-tag">VC</span>
+                <h3>Sequoia India's New $2B Fund Focuses on AI Startups</h3>
+                <p>Peak XV prioritizes generative AI and climate tech investments</p>
+                <div class="meta">10 hours ago</div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Leadership Section -->
+<section class="news-section">
+    <div class="section-header">
+        <h2>Leadership & Careers</h2>
+        <a href="#" class="view-all">View All →</a>
+    </div>
+    <div class="news-grid">
+        <a href="#" class="news-card">
+            <div class="news-card-img">👤</div>
+            <div class="news-card-body">
+                <span class="category-tag">Leadership</span>
+                <h3>Sundar Pichai on Managing Through AI Disruption</h3>
+                <p>Google CEO shares insights on leading transformation at scale</p>
+                <div class="meta">4 hours ago</div>
+            </div>
+        </a>
+        <a href="#" class="news-card">
+            <div class="news-card-img">🎓</div>
+            <div class="news-card-body">
+                <span class="category-tag">Careers</span>
+                <h3>IIM Placements 2024: Record ₹1 Cr+ Offers</h3>
+                <p>Consulting and tech dominate top recruiters list</p>
+                <div class="meta">6 hours ago</div>
+            </div>
+        </a>
+        <a href="#" class="news-card">
+            <div class="news-card-img">💼</div>
+            <div class="news-card-body">
+                <span class="category-tag">Management</span>
+                <h3>The Rise of the Fractional C-Suite</h3>
+                <p>Why companies are hiring part-time executives</p>
+                <div class="meta">1 day ago</div>
+            </div>
+        </a>
+        <a href="#" class="news-card">
+            <div class="news-card-img">🧠</div>
+            <div class="news-card-body">
+                <span class="category-tag">Skills</span>
+                <h3>Top 10 Skills Employers Want in 2025</h3>
+                <p>AI literacy and adaptability top the list</p>
+                <div class="meta">1 day ago</div>
+            </div>
+        </a>
+    </div>
+</section>
+
+<!-- Knowledge Base CTA -->
+<section class="knowledge-cta">
+    <h2>Master the Fundamentals</h2>
+    <p>Explore 150+ frameworks, models & concepts in our Knowledge Base</p>
+    <a href="knowledge/" class="btn">Browse Knowledge Base →</a>
+</section>
+
+<div id="site-footer"></div>
+<script src="components.js"></script>
 </body>
 </html>
