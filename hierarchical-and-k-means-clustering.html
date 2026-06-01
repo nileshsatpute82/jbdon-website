@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TE24YQT1P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8TE24YQT1P');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hierarchical and k-Means Clustering | JBDON</title>
+    <meta name="description" content="Hierarchical and k-Means Clustering - Strategic insights for business professionals from JBDON.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="site-header"></div>
+    
+    <div class="page-with-sidebar">
+        <div id="site-sidebar"></div>
+        
+        <main class="article-main">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="separator">/</span>
+                <span>Analytics</span>
+                <span class="separator">/</span>
+                <span>Hierarchical and k-Means Clust...</span>
+            </div>
+            
+            <div class="article-hero">
+                <span class="category-badge">Analytics</span>
+                <h1>Hierarchical and k-Means Clustering</h1>
+            </div>
+            
+            <div class="article-content">
+                <div class="diagram-container">
+                    <div class="diagram-title">Analytics Process</div>
+                    <div class="diagram-flow">
+                        <div class="diagram-box">Collect</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-box">Analyze</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-box highlight">Insight</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-box accent">Action</div>
+                    </div>
+                </div>
+                
+                <div class="article-body">
+<div class="diagram-container">
+    <div class="diagram-title">Clustering Methods Comparison</div>
+    <div class="diagram-grid">
+        <div class="diagram-card">
+            <div class="diagram-card-title">K-Means</div>
+            <div class="diagram-card-text">Fast, requires K specification, spherical clusters</div>
+        </div>
+        <div class="diagram-card">
+            <div class="diagram-card-title">Hierarchical</div>
+            <div class="diagram-card-text">Dendrogram output, no K needed, slower on large data</div>
+        </div>
+        <div class="diagram-card">
+            <div class="diagram-card-title">Agglomerative</div>
+            <div class="diagram-card-text">Bottom-up approach, merge closest clusters</div>
+        </div>
+        <div class="diagram-card">
+            <div class="diagram-card-title">Divisive</div>
+            <div class="diagram-card-text">Top-down approach, split largest clusters</div>
+        </div>
+    </div>
+
+<p>Hierarchical ClusteringHierarchical clustering starts by treating each observation as a separate cluster. Then, it repeatedly executes the following two steps:
+<ul><li>Identify the two clusters that are closest together</li><li>Merge the two most similar clusters</li></ul>This iterative process continues until all the clusters are merged together.
+Any of the 5 discussed measures to calculate the distance between a pair of clusters can be used in hierarchical clustering.
+Hierarchical clustering can be represented by a 2-D diagram called dendrogram. This diagram has the form of an inverted tree.
+Horizontal axis: observations
+Vertical axis: distance
+The length of the branches represented by the vertical lines indicate the distance between the two clusters that are merging. The diagram is read from the bottom to the top by sweeping a horizontal line across the entire tree.</p>
+
+<p>K-means clusteringThe overall idea is to assign objects to the nearest cluster. Where distance is measured from the object to the centroid of the cluster. The value of k indicates the number of clusters.
+K-mean clustering is also scalable, meaning that it can deal with very large datasets.
+<strong>Step 1: </strong>Selection of ‘k’ observations at the centroid of the initial clusters. This selection is somewhat arbitrary. The procedure works better if the initial centroids are as far apart as possible.
+<strong>Step 2: </strong>The rest of the observations are assigned to the closest centroid.
+<strong>Step 3: </strong>Once the assignment is completed, the cluster averages are recalculated. The centroid positions can change due to the recalculations and lead to a reassignment of the observations.
+<strong>Step 4: </strong>Steps 2 and 3 two steps are repeated until the centroids do not change.</p>
+
+<strong>Pros:</strong>
+Simple procedure
+<strong>Cons:</strong>
+Final clusters depend on the initial choices – Hence, cluster analysis software gives you the option of running the procedure multiple times from seeds that are randomly chosen.
+Both hierarchical clustering and K-means are procedures that find approximate solutions to the problem maximizing the similarity of the objects in each cluster. The maximization must take into consideration that there must be k clusters and that all objects must belong to one cluster and only one cluster.
+                    <div id="share-buttons"></div>
+                </div>
+                
+                <div class="related-articles">
+                    <h3>Continue Reading</h3>
+                    <div class="related-grid">
+                        <a href="data-visualization.html" class="related-card">
+                            <div class="card-category">Analytics</div>
+                            <h4>Data Visualization</h4>
+                            <p>Create effective visual displays</p>
+                        </a>
+                        <a href="customer-analytics.html" class="related-card">
+                            <div class="card-category">Analytics</div>
+                            <h4>Customer Analytics</h4>
+                            <p>Understand customer behavior</p>
+                        </a>
+                        <a href="ab-testing-introduction.html" class="related-card">
+                            <div class="card-category">Analytics</div>
+                            <h4>A/B Testing</h4>
+                            <p>Design better experiments</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <div id="site-footer"></div>
+    <script src="components.js"></script>
+</body>
+</html>

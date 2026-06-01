@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TE24YQT1P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8TE24YQT1P');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Probability Models | JBDON</title>
+    <meta name="description" content="Probability Models - Strategic insights for business professionals from JBDON.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="site-header"></div>
+    
+    <div class="page-with-sidebar">
+        <div id="site-sidebar"></div>
+        
+        <main class="article-main">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="separator">/</span>
+                <span>Analytics</span>
+                <span class="separator">/</span>
+                <span>Probability Models</span>
+            </div>
+            
+            <div class="article-hero">
+                <span class="category-badge">Analytics</span>
+                <h1>Probability Models</h1>
+            </div>
+            
+            <div class="article-content">
+                <div class="diagram-container">
+                    <div class="diagram-title">Analytics Process</div>
+                    <div class="diagram-flow">
+                        <div class="diagram-box">Collect</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-box">Analyze</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-box highlight">Insight</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-box accent">Action</div>
+                    </div>
+                </div>
+                
+                <div class="article-body">
+<div class="diagram-container">
+    <div class="diagram-title">Common Probability Distributions</div>
+    <div class="diagram-grid">
+        <div class="diagram-card">
+            <div class="diagram-card-title">Normal</div>
+            <div class="diagram-card-text">Bell curve for continuous natural phenomena</div>
+        </div>
+        <div class="diagram-card">
+            <div class="diagram-card-title">Binomial</div>
+            <div class="diagram-card-text">Success/failure outcomes over trials</div>
+        </div>
+        <div class="diagram-card">
+            <div class="diagram-card-title">Poisson</div>
+            <div class="diagram-card-text">Event counts in fixed intervals</div>
+        </div>
+        <div class="diagram-card">
+            <div class="diagram-card-title">Exponential</div>
+            <div class="diagram-card-text">Time between events</div>
+        </div>
+    </div>
+
+<strong><em>Video – insights and discussion</em></strong>
+We employ a “Buy Till You Die” model to predict future donation behaviors
+The model only uses three inputs:<ul><li><strong>Recency </strong>(R)</li><li><strong>Frequency </strong>(F)</li><li><strong>Number of people </strong>for each combination of R/F</li></ul>This requires a small amount of data and provides an easier structure to work with (i.e., data are aggregated from individual-‐level to R/F groups)
+By assuming certain <strong>probability distributions </strong>for donors’ <strong>propensities</strong>, we can construct a robust model that is <strong>easy to implement on Excel</strong>
+This “BTYD” modeling approach has a <strong>long track record of success </strong>in a variety of different domains
+Expected number of donations in 2002-2006 as a function of recency and frequency à
+</p><p>
+<ul><li>Looking at the Bob’s, we observe that despite making a donation in every year from 1995 to 2001 (100% donation rate), there is only 3.75 out of 5 times that the Bobs are likely to make a donation in the period of 2002 to 2006.</li><li>Looking at the Sarah’s. These people are likely to make a donation only 0.07 out of 5 times. However, the total number of Sarah’s is very high. As we can see below, it is 3,464 out of 11,104.</li></ul> <ul><li>Mary and Chris have the same RF (6,4), so their expected number of donations going forward is the same. Even though Mary and Chris have lower F than Sharmila, their higher R suggests that they are Alive, thus they are <strong>50% more valuable</strong> than Sharmila.</li><li>Sharmila (5,5), despite high donation rate, has likely lapsed.</li></ul>
+We now take our table, keep the rows and average across the columns. We're going to take a weighted average across the columns.
+We can see that the model predicts very well both as for recency and for frequency.
+Let’s look at the <strong>frequency graph.</strong>
+At the top of that graph would be the Bobs. That number at the top of that graph would be 3.75. That's the prediction according to the model. If we look just below that, we'll see the actual number associated with the Bobs = 3.53. Thus, the model over-forecasts the number of purchases that the Bobs would make in the future. However, it's quite close , say within 5%.
+Let’s look at the <strong>recency graph.</strong>
+This graph isn't quite as pretty and perfect as the other graph. Especially towards the left side of it. Those people who haven't made purchases for a while, the model thanks to be killing them off and underestimating how many purchases they will make but it's not bad.
+It still does a pretty good job.
+Here, we've taken the Bobs and the Marys together because they made their purchases in the most recent period. We're going to say, how many purchases do we expect people to make on the basis of when they made them as purchased? And how many purchases did they make? Again, the mapping is very good.
+<strong>We now bring it all together and make overall statements about purchasing for the customer base as a whole.</strong>
+The graph to the left shows you the cumulative number of purchases.
+<strong>Example 4:</strong>
+Using a larger dataset from a different non-profit firm that was monitored for a much longer period.
+We can see a “heat map” that shows which combinations of RF will likely yield the most valuable donors.
+Columns à Recency
+Rows à Frequency
+<strong>Observations:</strong>
+Equivalent of Bob’s on the bottom-right à those who donated at every opportunity
+Here again, we see that recency trumps frequency
+We now look at the likelihood that a customer like this with this particular RF pattern would indeed be alive.
+There are many models that predict future donation behaviors; we believe our method is different / superior because:<ul><li>The model requires a very small amount of data (Recency and Frequency), compared to other models that require a large dataset (typically detailed individual-­‐level characteristics, e.g., demographics)</li><li>The model has demonstrated robust out-­‐of-­‐sample validation</li><li>The model can be generalized to other types of behaviors; it is not excessively customized to the donation domain</li><li>The model can easily be implemented on Excel; it does not require any proprietary or specialized software</li></ul>
+                    <div id="share-buttons"></div>
+                </div>
+                
+                <div class="related-articles">
+                    <h3>Continue Reading</h3>
+                    <div class="related-grid">
+                        <a href="data-visualization.html" class="related-card">
+                            <div class="card-category">Analytics</div>
+                            <h4>Data Visualization</h4>
+                            <p>Create effective visual displays</p>
+                        </a>
+                        <a href="customer-analytics.html" class="related-card">
+                            <div class="card-category">Analytics</div>
+                            <h4>Customer Analytics</h4>
+                            <p>Understand customer behavior</p>
+                        </a>
+                        <a href="ab-testing-introduction.html" class="related-card">
+                            <div class="card-category">Analytics</div>
+                            <h4>A/B Testing</h4>
+                            <p>Design better experiments</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <div id="site-footer"></div>
+    <script src="components.js"></script>
+</body>
+</html>

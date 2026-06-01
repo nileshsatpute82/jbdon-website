@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8TE24YQT1P"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8TE24YQT1P');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Reduction and Unsupervised Learning | JBDON</title>
+    <meta name="description" content="Data Reduction and Unsupervised Learning - Strategic insights for business professionals from JBDON.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="site-header"></div>
+    
+    <div class="page-with-sidebar">
+        <div id="site-sidebar"></div>
+        
+        <main class="article-main">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="separator">/</span>
+                <span>Analytics</span>
+                <span class="separator">/</span>
+                <span>Data Reduction and Unsupervise...</span>
+            </div>
+            
+            <div class="article-hero">
+                <span class="category-badge">Analytics</span>
+                <h1>Data Reduction and Unsupervised Learning</h1>
+            </div>
+            
+            <div class="article-content">
+                <div class="diagram-container">
+                    <div class="diagram-title">Analytics Process</div>
+                    <div class="diagram-flow">
+                        <div class="diagram-box">Collect</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-box">Analyze</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-box highlight">Insight</div>
+                        <span class="diagram-arrow">→</span>
+                        <div class="diagram-box accent">Action</div>
+                    </div>
+                </div>
+                
+                <div class="article-body">
+<div class="diagram-container">
+    <div class="diagram-title">Unsupervised Learning Techniques</div>
+    <div class="diagram-grid">
+        <div class="diagram-card">
+            <div class="diagram-card-title">PCA</div>
+            <div class="diagram-card-text">Principal Component Analysis for dimensionality reduction</div>
+        </div>
+        <div class="diagram-card">
+            <div class="diagram-card-title">Clustering</div>
+            <div class="diagram-card-text">Group similar data points without labels</div>
+        </div>
+        <div class="diagram-card">
+            <div class="diagram-card-title">Association</div>
+            <div class="diagram-card-text">Find rules and patterns in transactions</div>
+        </div>
+        <div class="diagram-card">
+            <div class="diagram-card-title">Anomaly Detection</div>
+            <div class="diagram-card-text">Identify outliers and unusual patterns</div>
+        </div>
+    </div>
+
+<p>Dataset: a table where the variables, which are also called features or attributes, are in the columns and the observations are in the rows. This means that all the data values are in the body of the table.</p>
+
+<p>Why do we need to reduce number of variables?
+<ul><li>Redundancy among the variables in a dataset.</li><li>Thus, it is possible to reduce the number of dimensions without losing critical information.</li></ul>Note: Redundancy occurs when different attributes respond in similar ways to some common underlying factor.
+<strong>Example: </strong>HR department of a company creates an instrument to measure job satisfaction
+Aim of study: HR manager wants to predict an employee’s intention to quit
+Questions asked to be rated (one means that they strongly disagree with the statement and seven means that they strongly agree):
+<ul><li>My supervisor treats me with consideration.</li><li>My supervisor consults me concerning important decisions that affect my work.</li><li>My supervisor gives me recognition when I do a good a job.</li><li>My supervisor gives me the support I need to do my job well.</li><li>My pay is fair.</li><li>My pay is appropriate, given the amount of responsibility that comes with my job.</li><li>My pay is comparable to the pay earned by other employees whose job are similar to mine.</li></ul>Problem in methodology: Redundancy in the predictive variables. The seven items in the questionnaire are not really measuring seven different constructs.
+<ul><li>Items one to four are measuring a single construct that could be labelled “satisfaction with supervision”.</li><li>Items five to seven are measuring a different construct that could be labelled “satisfaction with pay”.</li></ul>These constructs can be identified using a technique called principal component analysis (PCA). PCA creates new variables as linear combinations of the original variables. These new variables are called principal components.
+In the example, a principal component analysis would identify two components. PCA would transform the original seven values into two scores, one for each component.</p>
+
+<p>The employee with ID 102274 seems to be more satisfied with supervision than with pay.
+</p>
+
+<p>Clustering falls under data reduction.
+It can take a large number of observations and reduce them into a small number of identifiable groups. Each of these groups can be interpreted more easily and is represented by a centroid.</p>
+
+<p>The above scatter plot shows four clusters for the scores in the job satisfaction survey.
+The stars represent the centroid of each cluster and can be used to describe all the observations in the group.</p>
+
+<p>In classification, the objective is to find a set of rules that can be applied to a new observation in order to assign this new observation to a group. The methods for classification develop rules by discovering patterns in historical data.
+The critical feature of this historical data is that classification of the observations is known, and it is used to learn how to classify future observations. Because this piece of information is available, the process is known as supervised learning.
+When the classification of observations is known and used to learn how to classify future observations, the process is known as supervised learning.
+For example, in the below table, we can see ten of the answers to the job satisfaction survey and also whether the employee quit the company or not. A prediction model built on this data will fall in the category of supervised learning, because the outcome that the model is trying to predict is known in historical data.</p>
+
+<p>In unsupervised learning, the observations in the <em>historical data are not labelled</em>. Thus, we don’t know if an observation belongs to one group or another. We also don't know how many different groups there are. Discovering the number of groups is therefore, one of the main outcomes of the analysis.
+For example, Information Resources Incorporated conducted a cluster analysis of survey data to establish that the market of natural and organic products consisted of seven distinct segments, a number that was not known prior to the completion of the analysis.
+Cluster analysis can also be applied to historical data that is labelled with the purpose of <em>finding new labels</em>.
+For example, in one study, cluster analysis was used to categorize mutual funds based on their financial characteristics instead of their investment objectives. The historical data for the study consisted of 904 different funds that fund managers had classified into seven categories according to the investment objectives. However, a cluster analysis determined that there were only three different fund categories. The reduction in the number of categories has significant benefits to investors seeking to diversify their portfolios. The study determined that the consolidated categories were more informative about performance and risk than the original seven categories created by the fund managers.
+In terms of data to use, the analyst initially considered 28 financial variables that were related to risk and return. However, after applying principal component analysis, they found that 16 out of the 28 variables were able to explain 98% of the variation in the dataset. Therefore, they only use 16 variables per cluster which as we already mentioned, resulted in three fund categories. This example shows that dimensionality reduction and data reduction complement each other. It is a common practice to apply dimensionality reduction techniques such as PCA before clustering</p>
+                    <div id="share-buttons"></div>
+                </div>
+                
+                <div class="related-articles">
+                    <h3>Continue Reading</h3>
+                    <div class="related-grid">
+                        <a href="data-visualization.html" class="related-card">
+                            <div class="card-category">Analytics</div>
+                            <h4>Data Visualization</h4>
+                            <p>Create effective visual displays</p>
+                        </a>
+                        <a href="customer-analytics.html" class="related-card">
+                            <div class="card-category">Analytics</div>
+                            <h4>Customer Analytics</h4>
+                            <p>Understand customer behavior</p>
+                        </a>
+                        <a href="ab-testing-introduction.html" class="related-card">
+                            <div class="card-category">Analytics</div>
+                            <h4>A/B Testing</h4>
+                            <p>Design better experiments</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+    
+    <div id="site-footer"></div>
+    <script src="components.js"></script>
+</body>
+</html>
