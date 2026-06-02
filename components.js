@@ -1,5 +1,5 @@
 // JBDON News Portal + Knowledge Base - Components
-// Updated for news-first homepage
+// Updated for news-first homepage with working mobile menu
 
 const CATEGORIES = {
     strategy: {
@@ -13,10 +13,7 @@ const CATEGORIES = {
             {title: "GE/McKinsey Matrix", url: "knowledge/ge-matrix-or-mckinsey-matrix.html"},
             {title: "Strategic Planning Process", url: "knowledge/the-strategic-planning-process.html"},
             {title: "Mission Statement", url: "knowledge/the-mission-statement.html"},
-            {title: "Benchmarking", url: "knowledge/benchmarking.html"},
-            {title: "Shell Directional Matrix", url: "knowledge/shell-directional-policy-matrix.html"},
-            {title: "Porter's Generic Strategies", url: "knowledge/porters-sustainable-competitive-advantage-model.html"},
-            {title: "Porter's National Competitive Advantage", url: "knowledge/porters-national-competitive-advantage-model.html"}
+            {title: "Benchmarking", url: "knowledge/benchmarking.html"}
         ]
     },
     marketing: {
@@ -27,11 +24,7 @@ const CATEGORIES = {
             {title: "NPD Process", url: "knowledge/new-product-development-npd-process.html"},
             {title: "Buyer Behavior Models", url: "knowledge/buyer-behavior-models.html"},
             {title: "Pricing Strategies", url: "knowledge/pricing-strategies.html"},
-            {title: "Maslow's Hierarchy", url: "knowledge/maslows-hierarchy-of-needs.html"},
-            {title: "Marketing Information System", url: "knowledge/marketing-information-system.html"},
-            {title: "Media Planning", url: "knowledge/media-planning.html"},
-            {title: "Product Positioning Map", url: "knowledge/product-positioning-map.html"},
-            {title: "NPD Model", url: "knowledge/npd-model.html"}
+            {title: "Maslow's Hierarchy", url: "knowledge/maslows-hierarchy-of-needs.html"}
         ]
     },
     analytics: {
@@ -41,10 +34,7 @@ const CATEGORIES = {
             {title: "A/B Testing", url: "knowledge/ab-testing-introduction.html"},
             {title: "Regression Analysis", url: "knowledge/regression-analysis.html"},
             {title: "Cluster Analysis", url: "knowledge/what-is-cluster-analysis.html"},
-            {title: "Data Visualization", url: "knowledge/data-visualization.html"},
-            {title: "Survey Design", url: "knowledge/survey-design.html"},
-            {title: "Optimization", url: "knowledge/optimization-and-decision-making.html"},
-            {title: "Descriptive Analytics", url: "knowledge/what-is-descriptive-analytics.html"}
+            {title: "Data Visualization", url: "knowledge/data-visualization.html"}
         ]
     },
     economics: {
@@ -52,10 +42,7 @@ const CATEGORIES = {
         articles: [
             {title: "Price Elasticity", url: "knowledge/demand-elasticity.html"},
             {title: "Demand Concepts", url: "knowledge/demand-concepts-and-analysis.html"},
-            {title: "Cost Analysis I", url: "knowledge/cost-concepts-and-analysis-i.html"},
-            {title: "Cost Analysis II", url: "knowledge/cost-concepts-and-analysis-ii.html"},
-            {title: "Production Function", url: "knowledge/production-function.html"},
-            {title: "Pricing Decisions", url: "knowledge/pricing-decisions.html"}
+            {title: "Cost Analysis I", url: "knowledge/cost-concepts-and-analysis-i.html"}
         ]
     },
     leadership: {
@@ -64,20 +51,10 @@ const CATEGORIES = {
             {title: "Change Management", url: "knowledge/change-management.html"},
             {title: "Teamwork", url: "knowledge/collaboration-and-teamwork.html"},
             {title: "Adaptability", url: "knowledge/adaptability.html"},
-            {title: "Confidence", url: "knowledge/confidence.html"},
-            {title: "Entrepreneurial Competencies", url: "knowledge/entrepreneurial-competencies.html"},
-            {title: "The Start-Up of You", url: "knowledge/the-start-up-of-you.html"}
+            {title: "Confidence", url: "knowledge/confidence.html"}
         ]
     }
 };
-
-const NEWS_CATEGORIES = [
-    {name: "Strategy & M&A", id: "strategy-ma"},
-    {name: "Startup & VC", id: "startup-vc"},
-    {name: "Markets & Economy", id: "markets"},
-    {name: "Leadership & Careers", id: "leadership"},
-    {name: "Tech & AI", id: "tech-ai"}
-];
 
 function getCurrentPage() {
     const path = window.location.pathname;
@@ -97,13 +74,9 @@ function generateHeader() {
     <header class="header">
         <div class="header-inner">
             <a href="${baseUrl}index.html" class="logo">JBD<span>ON</span></a>
-            <nav class="main-nav">
-                <div class="nav-item">
-                    <a href="${baseUrl}index.html" class="nav-link ${!isKnowledge ? 'active' : ''}">News</a>
-                </div>
-                <div class="nav-item" data-category="knowledge">
-                    <a href="${baseUrl}knowledge/" class="nav-link ${isKnowledge ? 'active' : ''}">Knowledge <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg></a>
-                </div>
+            <nav class="main-nav" id="main-nav">
+                <a href="${baseUrl}index.html" class="nav-link ${!isKnowledge ? 'active' : ''}">News</a>
+                <a href="${baseUrl}knowledge/" class="nav-link ${isKnowledge ? 'active' : ''}">Knowledge</a>
             </nav>
             <div class="header-actions">
                 <button class="search-btn" id="search-btn" aria-label="Search">
@@ -117,25 +90,20 @@ function generateHeader() {
             </div>
         </div>
     </header>
-    <div class="mega-menu" id="mega-menu">
-        <div class="mega-menu-inner">
-            <div class="mega-sidebar">
-                <h3>Knowledge Base</h3>
-                <div class="mega-cat-count">150+ Articles</div>
-            </div>
-            <div class="mega-main">
-                <div class="mega-links" id="mega-links">
-                    ${Object.keys(CATEGORIES).map(key => `
-                        <div class="mega-col">
-                            <h4>${CATEGORIES[key].name}</h4>
-                            <ul>
-                                ${CATEGORIES[key].articles.slice(0,6).map(a => 
-                                    `<li><a href="${baseUrl}${a.url}">${a.title}</a></li>`
-                                ).join('')}
-                            </ul>
-                        </div>
-                    `).join('')}
-                </div>
+    
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu-overlay" id="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <a href="${baseUrl}index.html" class="mobile-nav-link">News</a>
+            <a href="${baseUrl}knowledge/" class="mobile-nav-link">Knowledge Base</a>
+            <div class="mobile-menu-divider"></div>
+            <div class="mobile-menu-section">
+                <h4>Popular Topics</h4>
+                <a href="${baseUrl}knowledge/porters-five-forces-model.html">Porter's Five Forces</a>
+                <a href="${baseUrl}knowledge/swot-analysis.html">SWOT Analysis</a>
+                <a href="${baseUrl}knowledge/bcg-growth-share-matrix.html">BCG Matrix</a>
+                <a href="${baseUrl}knowledge/customer-analytics.html">Customer Analytics</a>
+                <a href="${baseUrl}knowledge/change-management.html">Change Management</a>
             </div>
         </div>
     </div>`;
@@ -179,9 +147,6 @@ function generateFooter(isHomepage) {
                     <h4>News</h4>
                     <ul>
                         <li><a href="${baseUrl}index.html">Latest News</a></li>
-                        <li><a href="#">Strategy & M&A</a></li>
-                        <li><a href="#">Startup & VC</a></li>
-                        <li><a href="#">Markets</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
@@ -190,14 +155,12 @@ function generateFooter(isHomepage) {
                         <li><a href="${baseUrl}knowledge/">All Frameworks</a></li>
                         <li><a href="${baseUrl}knowledge/porters-five-forces-model.html">Strategy</a></li>
                         <li><a href="${baseUrl}knowledge/positioning.html">Marketing</a></li>
-                        <li><a href="${baseUrl}knowledge/customer-analytics.html">Analytics</a></li>
                     </ul>
                 </div>
                 <div class="footer-col">
                     <h4>Connect</h4>
                     <ul>
                         <li><a href="mailto:nilesh@jbdon.com">Contact</a></li>
-                        <li><a href="#">Newsletter</a></li>
                     </ul>
                 </div>
             </div>
@@ -229,13 +192,6 @@ function generateShareButton() {
 function generateSearchOverlay() {
     const baseUrl = isKnowledgePage() ? '../' : '';
     
-    const allArticles = [];
-    Object.keys(CATEGORIES).forEach(key => {
-        CATEGORIES[key].articles.forEach(a => {
-            allArticles.push({...a, category: CATEGORIES[key].name, url: baseUrl + a.url});
-        });
-    });
-    
     return `
     <div class="search-overlay" id="search-overlay">
         <div class="search-container">
@@ -263,7 +219,7 @@ function shareLinkedIn() {
 
 function copyLink() {
     navigator.clipboard.writeText(window.location.href).then(() => {
-        alert('Link copied to clipboard!');
+        alert('Link copied!');
     });
 }
 
@@ -287,23 +243,26 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function initInteractions() {
-    // Knowledge Mega Menu
-    const knowledgeNav = document.querySelector('[data-category="knowledge"]');
-    const megaMenu = document.getElementById('mega-menu');
+    // Mobile Menu Toggle
+    const mobileBtn = document.getElementById('mobile-menu-btn');
+    const mobileOverlay = document.getElementById('mobile-menu-overlay');
     
-    if (knowledgeNav && megaMenu) {
-        knowledgeNav.addEventListener('mouseenter', () => {
-            megaMenu.classList.add('active');
+    if (mobileBtn && mobileOverlay) {
+        mobileBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+            mobileBtn.classList.toggle('active');
+            mobileOverlay.classList.toggle('active');
+            document.body.classList.toggle('menu-open');
         });
         
-        knowledgeNav.addEventListener('mouseleave', (e) => {
-            if (!megaMenu.contains(e.relatedTarget)) {
-                megaMenu.classList.remove('active');
+        // Close when clicking overlay background
+        mobileOverlay.addEventListener('click', function(e) {
+            if (e.target === mobileOverlay) {
+                mobileBtn.classList.remove('active');
+                mobileOverlay.classList.remove('active');
+                document.body.classList.remove('menu-open');
             }
-        });
-        
-        megaMenu.addEventListener('mouseleave', () => {
-            megaMenu.classList.remove('active');
         });
     }
     
@@ -341,7 +300,7 @@ function initInteractions() {
         searchInput.addEventListener('input', (e) => {
             const query = e.target.value.toLowerCase().trim();
             if (query.length < 2) {
-                searchResults.innerHTML = '<div class="search-hint">Type at least 2 characters to search...</div>';
+                searchResults.innerHTML = '<div class="search-hint">Type at least 2 characters...</div>';
                 return;
             }
             
@@ -361,17 +320,6 @@ function initInteractions() {
                     <span class="search-result-title">${a.title}</span>
                 </a>
             `).join('');
-        });
-    }
-    
-    // Mobile menu
-    const mobileBtn = document.getElementById('mobile-menu-btn');
-    const mainNav = document.querySelector('.main-nav');
-    
-    if (mobileBtn && mainNav) {
-        mobileBtn.addEventListener('click', () => {
-            mobileBtn.classList.toggle('active');
-            mainNav.classList.toggle('active');
         });
     }
     

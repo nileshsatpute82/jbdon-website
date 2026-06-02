@@ -76,7 +76,9 @@ body { background: var(--cream); }
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    text-decoration: none;
 }
+.hero-main:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 .hero-main::before {
     content: "";
     position: absolute;
@@ -241,13 +243,18 @@ body { background: var(--cream); }
     box-shadow: var(--shadow-md);
 }
 .news-card-img {
-    height: 140px;
-    background: linear-gradient(135deg, var(--gray-100) 0%, var(--gray-200) 100%);
+    height: 120px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    color: var(--gray-400);
-    font-size: 2rem;
+}
+.news-card-img .card-icon {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--accent);
+    letter-spacing: 1px;
+    text-transform: uppercase;
 }
 .news-card-body {
     padding: 16px;
@@ -340,12 +347,12 @@ body { background: var(--cream); }
 
 <!-- Hero News Section -->
 <section class="news-hero">
-    <div class="hero-main">
+    <a href="#" class="hero-main">
         <span class="category-tag">Strategy & M&A</span>
         <h2>Tata Group's Strategic Pivot: From Steel Giant to Tech Powerhouse</h2>
         <p>How N. Chandrasekaran is reshaping India's oldest conglomerate through aggressive digital investments and strategic acquisitions in semiconductors, EVs, and AI.</p>
-        <div class="meta">5 hours ago • 8 min read</div>
-    </div>
+        <div class="meta">5 hours ago</div>
+    </a>
     <div class="hero-sidebar">
         <a href="#" class="sidebar-card">
             <span class="category-tag">Startup & VC</span>
@@ -382,11 +389,11 @@ body { background: var(--cream); }
 <section class="news-section">
     <div class="section-header">
         <h2>Strategy & M&A</h2>
-        <a href="#" class="view-all">View All →</a>
+        <a href="#" class="view-all">View All</a>
     </div>
     <div class="news-grid">
         <a href="#" class="news-card">
-            <div class="news-card-img">📊</div>
+            <div class="news-card-img"><span class="card-icon">M&A</span></div>
             <div class="news-card-body">
                 <span class="category-tag">M&A</span>
                 <h3>Adani Group Explores Acquisition of Cement Assets in Africa</h3>
@@ -395,7 +402,7 @@ body { background: var(--cream); }
             </div>
         </a>
         <a href="#" class="news-card">
-            <div class="news-card-img">🏢</div>
+            <div class="news-card-img"><span class="card-icon">Strategy</span></div>
             <div class="news-card-body">
                 <span class="category-tag">Strategy</span>
                 <h3>Infosys Restructures Business Units for AI-First Approach</h3>
@@ -404,7 +411,7 @@ body { background: var(--cream); }
             </div>
         </a>
         <a href="#" class="news-card">
-            <div class="news-card-img">🤝</div>
+            <div class="news-card-img"><span class="card-icon">M&A</span></div>
             <div class="news-card-body">
                 <span class="category-tag">M&A</span>
                 <h3>HDFC Bank-HDFC Merger: One Year Later</h3>
@@ -413,7 +420,7 @@ body { background: var(--cream); }
             </div>
         </a>
         <a href="#" class="news-card">
-            <div class="news-card-img">📈</div>
+            <div class="news-card-img"><span class="card-icon">Strategy</span></div>
             <div class="news-card-body">
                 <span class="category-tag">Strategy</span>
                 <h3>Mahindra's EV Playbook: Born Electric Strategy</h3>
@@ -428,11 +435,11 @@ body { background: var(--cream); }
 <section class="news-section">
     <div class="section-header">
         <h2>Startup & VC</h2>
-        <a href="#" class="view-all">View All →</a>
+        <a href="#" class="view-all">View All</a>
     </div>
     <div class="news-grid">
         <a href="#" class="news-card">
-            <div class="news-card-img">🚀</div>
+            <div class="news-card-img"><span class="card-icon">Funding</span></div>
             <div class="news-card-body">
                 <span class="category-tag">Funding</span>
                 <h3>Zepto Raises $665M, Valuation Soars to $3.6B</h3>
@@ -441,7 +448,7 @@ body { background: var(--cream); }
             </div>
         </a>
         <a href="#" class="news-card">
-            <div class="news-card-img">💡</div>
+            <div class="news-card-img"><span class="card-icon">IPO</span></div>
             <div class="news-card-body">
                 <span class="category-tag">IPO</span>
                 <h3>Swiggy IPO: What Investors Need to Know</h3>
@@ -450,7 +457,7 @@ body { background: var(--cream); }
             </div>
         </a>
         <a href="#" class="news-card">
-            <div class="news-card-img">🎯</div>
+            <div class="news-card-img"><span class="card-icon">SaaS</span></div>
             <div class="news-card-body">
                 <span class="category-tag">Startup</span>
                 <h3>India's SaaS Startups on Track for $50B ARR by 2030</h3>
@@ -459,7 +466,7 @@ body { background: var(--cream); }
             </div>
         </a>
         <a href="#" class="news-card">
-            <div class="news-card-img">🌱</div>
+            <div class="news-card-img"><span class="card-icon">VC</span></div>
             <div class="news-card-body">
                 <span class="category-tag">VC</span>
                 <h3>Sequoia India's New $2B Fund Focuses on AI Startups</h3>
@@ -474,11 +481,11 @@ body { background: var(--cream); }
 <section class="news-section">
     <div class="section-header">
         <h2>Leadership & Careers</h2>
-        <a href="#" class="view-all">View All →</a>
+        <a href="#" class="view-all">View All</a>
     </div>
     <div class="news-grid">
         <a href="#" class="news-card">
-            <div class="news-card-img">👤</div>
+            <div class="news-card-img"><span class="card-icon">CEO</span></div>
             <div class="news-card-body">
                 <span class="category-tag">Leadership</span>
                 <h3>Sundar Pichai on Managing Through AI Disruption</h3>
@@ -487,16 +494,16 @@ body { background: var(--cream); }
             </div>
         </a>
         <a href="#" class="news-card">
-            <div class="news-card-img">🎓</div>
+            <div class="news-card-img"><span class="card-icon">MBA</span></div>
             <div class="news-card-body">
                 <span class="category-tag">Careers</span>
-                <h3>IIM Placements 2024: Record ₹1 Cr+ Offers</h3>
+                <h3>IIM Placements 2024: Record 1 Cr+ Offers</h3>
                 <p>Consulting and tech dominate top recruiters list</p>
                 <div class="meta">6 hours ago</div>
             </div>
         </a>
         <a href="#" class="news-card">
-            <div class="news-card-img">💼</div>
+            <div class="news-card-img"><span class="card-icon">Mgmt</span></div>
             <div class="news-card-body">
                 <span class="category-tag">Management</span>
                 <h3>The Rise of the Fractional C-Suite</h3>
@@ -505,7 +512,7 @@ body { background: var(--cream); }
             </div>
         </a>
         <a href="#" class="news-card">
-            <div class="news-card-img">🧠</div>
+            <div class="news-card-img"><span class="card-icon">Skills</span></div>
             <div class="news-card-body">
                 <span class="category-tag">Skills</span>
                 <h3>Top 10 Skills Employers Want in 2025</h3>
@@ -520,7 +527,7 @@ body { background: var(--cream); }
 <section class="knowledge-cta">
     <h2>Master the Fundamentals</h2>
     <p>Explore 150+ frameworks, models & concepts in our Knowledge Base</p>
-    <a href="knowledge/" class="btn">Browse Knowledge Base →</a>
+    <a href="knowledge/" class="btn">Browse Knowledge Base</a>
 </section>
 
 <div id="site-footer"></div>
