@@ -739,3 +739,58 @@ body.menu-open {
 .main-nav .nav-link.active {
     color: var(--accent);
 }
+
+/* Mobile Category Accordions */
+.mobile-cat {
+    border-bottom: 1px solid var(--gray-100);
+}
+.mobile-cat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 0;
+    font-weight: 600;
+    font-size: 1rem;
+    color: var(--gray-800);
+    cursor: pointer;
+}
+.mobile-cat-header::after {
+    content: "+";
+    font-size: 1.2rem;
+    color: var(--gray-400);
+}
+.mobile-cat.open .mobile-cat-header::after {
+    content: "−";
+}
+.mobile-cat-links {
+    display: none;
+    padding-bottom: 12px;
+}
+.mobile-cat.open .mobile-cat-links {
+    display: block;
+}
+.mobile-cat-links a {
+    display: block;
+    padding: 8px 0 8px 12px;
+    font-size: 0.9rem;
+    color: var(--gray-600);
+    text-decoration: none;
+    border-left: 2px solid var(--gray-200);
+}
+.mobile-cat-links a:hover {
+    color: var(--accent-dark);
+    border-left-color: var(--accent);
+}
+
+/* Nav link simple style */
+.nav-link-simple {
+    padding: 8px 16px;
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+}
+.nav-link-simple:hover,
+.nav-link-simple.active {
+    color: var(--accent);
+}
